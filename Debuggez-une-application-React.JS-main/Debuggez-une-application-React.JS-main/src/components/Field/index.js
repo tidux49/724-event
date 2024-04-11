@@ -13,7 +13,7 @@ const Field = ({ type = FIELD_TYPES.INPUT_TEXT, label, name, placeholder }) => {
     case FIELD_TYPES.INPUT_TEXT:
       component = (
         <input
-          type="text"
+          type={FIELD_TYPES} required
           name={name}
           placeholder={placeholder}
           data-testid="field-testid"
@@ -26,7 +26,7 @@ const Field = ({ type = FIELD_TYPES.INPUT_TEXT, label, name, placeholder }) => {
     default:
       component = (
         <input
-          type="text"
+          type={FIELD_TYPES} required
           name={name}
           placeholder={placeholder}
           data-testid="field-testid"
